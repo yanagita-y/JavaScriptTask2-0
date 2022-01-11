@@ -1,6 +1,6 @@
-let FizzBuzz = (fizzNum, buzzNum) => {
+const FizzBuzz = (fizzNum, buzzNum) => {
     let outputtext = '';
-    let htmlout = document.getElementById("htmlout");
+    const htmlout = document.getElementById("htmlout");
     outputtext = checkfizzbuzzInput(fizzNum);
     if(outputtext !== ''){
         htmlout.innerHTML = `fizzNumには${outputtext}`;
