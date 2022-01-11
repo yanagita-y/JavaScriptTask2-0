@@ -11,9 +11,8 @@ const FizzBuzz = (fizzNum, buzzNum) => {
         htmlout.innerHTML = `buzzNumには${outputtext}`;
         return;
     }
-    let i = Math.min(fizzNum,buzzNum);
     htmlout.innerHTML = "表示したい文字列";
-        for(i; i<=99; i++){
+        for( let i = Math.min(fizzNum,buzzNum) ; i<=99 ; i++ ){
             if(i % fizzNum === 0 && i% buzzNum === 0){
                 outputtext += `FizzBuzz ${i}<br>`;
             }
