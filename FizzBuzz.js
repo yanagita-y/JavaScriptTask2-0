@@ -35,7 +35,7 @@ const FizzBuzz = (fizzNum, buzzNum) => {
     }
 }
 
-let checkfizzbuzzInput = (value) => {
+const checkfizzbuzzInput = (value) => {
     value = value.trim();
     if(value === ''){
         return '空白が入力されています。';
