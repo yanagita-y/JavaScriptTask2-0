@@ -38,7 +38,7 @@ const FizzBuzz = (fizzNum, buzzNum) => {
 const checkfizzbuzzInput = (value) => {
     value = value.trim();
     if(value === ''){
-        return '空白が入力されています。';
+        return '整数値を入力してください。';
     }
     if(Number.isInteger(Number(value)) === false) {
         return '整数値を入力してください。';
