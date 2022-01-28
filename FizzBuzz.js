@@ -5,14 +5,14 @@ const FizzBuzz = (fizzNum, buzzNum) => {
     outputtext = checkfizzbuzzInput(fizzNum);
     if(outputtext !== ''){
         const p = document.createElement('p');
-        p.textContent = `fizzNumには${outputtext}`
+        p.textContent = outputtext;
         output.appendChild(p);
         return;
     }
     outputtext = checkfizzbuzzInput(buzzNum);
     if(outputtext !== ''){
         const p = document.createElement('p');
-        p.textContent = `buzzNumには${outputtext}`
+        p.textContent = outputtext;
         output.appendChild(p);
         return;
     }
@@ -36,11 +36,8 @@ const FizzBuzz = (fizzNum, buzzNum) => {
 }
 
 const checkfizzbuzzInput = (value) => {
-    value = value.trim();
-    if(value === ''){
-        return '整数値を入力してください。';
-    }
-    if(Number.isInteger(Number(value)) === false) {
+    const check = value.match(/^[0-9]+$/);
+    if(check === null){
         return '整数値を入力してください。';
     }
     return '';
